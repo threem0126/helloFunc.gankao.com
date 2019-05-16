@@ -1,0 +1,32 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Resources:
+  fc: # service name
+    Type: 'Aliyun::Serverless::Service'
+    Properties:
+      Description: 'fc test'
+    helloworld2: # function name
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Handler: func.handler
+        Initializer: func.initializer
+        Runtime: nodejs8
+        CodeUri: './'
+        Timeout: 60
+      Events:
+        http-test:
+          Type: HTTP
+          Properties:
+            AuthType: ANONYMOUS
+            Methods: ['GET', 'POST', 'PUT']
+
+  HelloworldGroup: # Api Group
+    Type: 'Aliyun::Serverless::Api'
+    Properties:
+      StageName: RELEASE
+      DefinitionBody:
+        '/': # request path
+          get: # http method
+            x-aliyun-apigateway-api-name: hello_get # api name
+            x-aliyun-apigateway-fc:
+              arn: acs:fc:::services/${fc.Arn}/functions/${helloworld.Arn}/

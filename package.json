@@ -1,0 +1,48 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack  --progress --display-error-details"
+  },
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "antd": "^3.17.0",
+    "aws-sdk": "^2.451.0",
+    "body-parser": "^1.19.0",
+    "body-parser-xml": "^1.1.0",
+    "express": "^4.16.4",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.0",
+    "inherits": "^2.0.3",
+    "less": "^3.9.0",
+    "lodash": "^4.17.11",
+    "next": "^8.1.0",
+    "path": "^0.12.7",
+    "raw-body": "^2.4.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "util": "^0.10.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.1.5",
+    "@babel/runtime-corejs2": "^7.1.5",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

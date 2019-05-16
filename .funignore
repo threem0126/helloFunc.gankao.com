@@ -1,0 +1,9 @@
+# Logs
+/logs/
+/src/
+
+*.log
+webpack.config.js
+
+# Dependency directories
+node_modules/
