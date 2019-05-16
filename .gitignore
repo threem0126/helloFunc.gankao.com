@@ -2,7 +2,7 @@
 dist
 .idea
 .dist
-
+.next
 
 # dependencies
 node_modules
